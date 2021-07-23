@@ -229,48 +229,6 @@
                 </div>
             </section>
         </main>
-        <footer class="footer">
-            <div class="footer__container">
-                <div class="footer__nav">
-                    <div class="footer__menu menu__left">
-                        <ul>
-                            <li><a href="{{route('home')}}">Home</a></li>
-                            <li><a href="{{route('about')}}" class="menu__link">About Us</a></li>
-                            <li><a href="{{route('contact')}}">Contact Us</a></li>
-                            <li><a href="{{route('careers')}}">Careers</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__menu menu__center">
-                        <ul>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">Shipping & Returns</a></li>
-                            <li><a href="#">Our Policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__menu menu__right">
-                        <ul class="social__link">
-                            <li><a href="">
-                                    <picture>
-                                        <source srcset="{{asset('img/icon/face.svg')}}" type="image/webp">
-                                        <img src="{{asset('img/icon/face.svg')}}" alt=""></picture>
-                                    </i></a></li>
-                            <li><a href="">
-                                    <picture>
-                                        <source srcset="{{asset('img/icon/insta.svg')}}" type="image/webp">
-                                        <img src="{{asset('img/icon/insta.svg')}}" alt=""></picture>
-                                </a></li>
-                            <li><a href="">
-                                    <picture>
-                                        <source srcset="{{asset('img/icon/print.svg')}}" type="image/webp">
-                                        <img src="{{asset('img/icon/print.svg')}}" alt=""></picture>
-                                </a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer__text">
-                    <p>©2023 by RentRockReturn. Proudly created by RentRockReturn.com</p>
-                </div>
-            </div>
-        </footer>
+
     </div>
 @endsection

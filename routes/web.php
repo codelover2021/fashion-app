@@ -21,11 +21,25 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
-Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
-Route::get('/careers', [App\Http\Controllers\HomeController::class, 'careers'])->name('careers');
-Route::get('/brands', [App\Http\Controllers\HomeController::class, 'brands'])->name('brands');
+Route::get('/about', [App\Http\Controllers\UserController::class, 'about'])->name('about');
+Route::get('/requestAnItem', [App\Http\Controllers\UserController::class, 'requestAnItem'])->name('requestAnItem');
+//Route::get('/careers', [App\Http\Controllers\UserController::class, 'careers'])->name('careers');
+Route::get('/brands', [App\Http\Controllers\UserController::class, 'brands'])->name('brands');
+Route::get('/faqs', [App\Http\Controllers\UserController::class, 'faqs'])->name('faqs');
+Route::get('/contact', [App\Http\Controllers\UserController::class, 'contact'])->name('contact');
+Route::get('/ambassador', [App\Http\Controllers\AmbassadorController::class, 'ambassador'])->name('ambassador');
+Route::post('/ambassadorSend', [App\Http\Controllers\AmbassadorController::class, 'ambassadorSend'])->name('ambassadorSend');
 
 Route::get('/my-account', [App\Http\Controllers\UserController::class, 'my_account'])->name('my-account');
 Route::get('/changePassword', [App\Http\Controllers\UserController::class, 'showChangePasswordForm'])->name('change-password');
 Route::post('/toChangePassword', [App\Http\Controllers\UserController::class, 'changePassword']);
+Route::post('/requestSend', [App\Http\Controllers\UserController::class, 'request'])->name('requestSend');
+
+Route::get('/filter', [App\Http\Controllers\FilterController::class, 'filter'])->name('filter');
+Route::get('/designers', [App\Http\Controllers\FilterController::class, 'designers'])->name('designers');
+
+Route::get('/careers', [App\Http\Controllers\CarrersController::class, 'careers'])->name('careers');
+
+Route::get('/product-single/{id}', [App\Http\Controllers\ProductContrtoller::class, 'single_product'])->name('product-single');
+
+

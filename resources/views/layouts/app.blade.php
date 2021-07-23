@@ -28,8 +28,6 @@
 <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <script src="{{asset('js/script.min.js')}}"></script>
-    <script src="{{asset('card/card.min.js')}}"></script>
 
     <!-- Styles -->
     {{--    <link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
@@ -93,7 +91,7 @@
 <main class="py-4">
     @yield('content')
 </main>
+
 {{--    </div>--}}
 </body>
-<script src="{{asset('js/script.js')}}"></script>
 </html>
