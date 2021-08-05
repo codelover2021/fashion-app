@@ -15,7 +15,6 @@ class AmbassadorController extends Controller
     }
     public function ambassadorSend(Request $request)
     {
-        dd($request);
         $validateRequest = Validator::make($request->all(), [
             'name' => ['required', 'string', 'min:4'],
             'full_name' => ['required', 'string', 'min:4'],

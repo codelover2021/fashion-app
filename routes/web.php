@@ -42,4 +42,9 @@ Route::get('/careers', [App\Http\Controllers\CarrersController::class, 'careers'
 
 Route::get('/product-single/{id}', [App\Http\Controllers\ProductContrtoller::class, 'single_product'])->name('product-single');
 
+Route::post('/consign', [App\Http\Controllers\ConsignmentController::class, 'consign_an_item'])->name('consign');
+Route::post('/consignSend', [App\Http\Controllers\ConsignmentController::class, 'consignSend'])->name('consignSend');
+Route::get('/consignSecond', [App\Http\Controllers\ConsignmentController::class, 'consignSecond'])->name('consignSecond');
+
+
 

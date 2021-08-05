@@ -5,11 +5,14 @@
     <header class="header">
         <div class="header__container">
             <div class="header__menu menu-left">
-                <a href="#" class="header__logo">
-                    <span>RENT ROCK RETURN</span>
-                </a>
+
             </div>
             <div class="header__menu menu">
+                <div class="header__logo">
+                    <a href="#">
+                        <span>RENT ROCK RETURN</span>
+                    </a>
+                </div>
                 <nav class="menu__body">
                     <ul class="menu__list">
                         <li>
@@ -18,7 +21,6 @@
                         <li>
                             <a href="#" class="menu__link">Women</a>
                             <div class="menu__sub-list menu__sub-list-women">
-                                <img src="./assets/img/women.png" alt="men-shoes">
                                 <ul class="menu__sub-list-ul">
                                     <li>
                                         <a href="#" class="menu__link">Footwear</a>
@@ -61,12 +63,17 @@
                                         </ul>
                                     </li>
                                 </ul>
+                                <div class="list-women__img  list__img">
+                                    <img src="{{asset('img/women.jpg')}}" alt="men-shoes">
+                                    <p>christian louboutin</p>
+                                    <p>The date night Collection</p>
+                                </div>
                             </div>
                         </li>
                         <li>
                             <a href="#" class="menu__link">Men</a>
                             <div class="menu__sub-list menu__sub-list-men">
-                                <img src="./assets/img/men.png" alt="men-shoes">
+
                                 <ul class="menu__sub-list-ul">
                                     <li>
                                         <a href="#" class="menu__link">Footwear</a>
@@ -117,6 +124,11 @@
                                         </ul>
                                     </li>
                                 </ul>
+                                <div class="list-men__img list__img">
+                                    <img src="{{asset('img/men.jpg')}}" alt="men-shoes">
+                                    <p>YEZZY</p>
+                                    <p>The Exclusive Collection</p>
+                                </div>
                             </div>
                         </li>
                         <li>
@@ -156,30 +168,38 @@
                                     <span>Y</span>
                                     <span>Z</span>
                                 </div>
-                                <ul class="menu__sub-list-ul">
-                                    <li>
-                                        <a href="#" class="menu__link">Shop All Designers</a>
-                                        <ul>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="menu__link">Most wanted</a>
-                                        <ul>
-                                            <li>Adidas</li>
-                                            <li>Nike</li>
-                                            <li>Puma</li>
-                                            <li>Air Jordan</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="menu__link">New at RRR</a>
-                                        <ul>
-                                            <li>Adidas</li>
-                                            <li>Nike</li>
-                                            <li>Puma</li>
-                                            <li>Air Jordan</li>
-                                        </ul>
-                                </ul>
+                                <div class="menu__sub-list" style="position: initial;width: 70%;margin: 0 auto;">
+                                    <ul class="menu__sub-list-ul">
+                                        <li>
+                                            <a href="#" class="menu__link">Shop All Designers</a>
+                                            <ul>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="menu__link">Most wanted</a>
+                                            <ul>
+                                                <li>Adidas</li>
+                                                <li>Nike</li>
+                                                <li>Puma</li>
+                                                <li>Air Jordan</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="menu__link">New at RRR</a>
+                                            <ul>
+                                                <li>Adidas</li>
+                                                <li>Nike</li>
+                                                <li>Puma</li>
+                                                <li>Air Jordan</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <div class="list-desing__img list__img">
+                                        <img src="{{asset('img/desing.jpg')}}" alt="men-shoes">
+                                        <p>Air Jordan</p>
+                                        <p>The Retrto Collection</p>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                         <li>
@@ -223,8 +243,8 @@
                         </a>
                     </li>
                     <li class="menu__list-icon">
-                        <a href="#" class="menu__link">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <a href="{{route('my-account')}}" class="menu__link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="my-account-btn">
                                 <path
                                     d="M12 15C15.3137 15 18 12.3137 18 9C18 5.68629 15.3137 3 12 3C8.68629 3 6 5.68629 6 9C6 12.3137 8.68629 15 12 15Z"
                                     stroke="white" stroke-miterlimit="10" />
@@ -262,7 +282,15 @@
                                 <span class="points__price">2$</span>
                             </li>
                             <li>
-                                <a href="#" class="menu__link" style="font-weight: bold">LOG OUT</a>
+                                <a class="menu__link" style="font-weight: bold" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    LOG OUT
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
                             </li>
 
                         </ul>
@@ -310,7 +338,7 @@
                         </div>
                         <div class="basketPrd__item-info">
                             <div class="basketPrd__img">
-                                <img src="./assets/img/yeezyboost350v2black.jpg" alt="product-image">
+                                <img src="{{('assets/img/yeezyboost350v2black.jpg')}}" alt="product-image">
                             </div>
                             <div class="basketPrd__about">
                                 <div class="basketPrd__about-nmSz">

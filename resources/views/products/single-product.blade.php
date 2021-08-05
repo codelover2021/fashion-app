@@ -7,7 +7,7 @@
     <header class="header">
         <div class="header__container">
             <div class="header__menu menu-left">
-                <a href="#" class="header__logo">
+                <a href="#" class="header__logo">0
                     <span>RENT ROCK RETURN</span>
                 </a>
             </div>
